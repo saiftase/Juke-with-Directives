@@ -1,10 +1,10 @@
 juke
-.directive('albumList', function () {
+.directive('albumsList', function () {
   return {
   	restrict: 'E',
     scope: {
       albums: '='
     },
-    templateUrl: '/js/album/templates/album-list.html'
+    templateUrl: '/js/album/templates/albums-list.html'
   };
 });
