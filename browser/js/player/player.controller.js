@@ -6,7 +6,8 @@ juke.controller('PlayerCtrl', function ($scope, $rootScope, PlayerFactory) {
 
   $scope.toggle = function () {
     if ( PlayerFactory.isPlaying() ) PlayerFactory.pause();
-    else PlayerFactory.resume();
+    else PlayerFactory.resume;
+    // else PlayerFactory.setCurrentTime(500.666);
   };
 
   $scope.getPercent = function () {
