@@ -1,4 +1,4 @@
-<table class='table'>
+<table class='table' ng-show="songs.length">
   <thead>
     <tr>
       <th></th>
@@ -20,5 +20,5 @@
     </tr>
   </tbody>
 </table>
-
+<small ng-hide="songs.length">No songs.</small>
 <!-- artist.songs vs album.songs -->
