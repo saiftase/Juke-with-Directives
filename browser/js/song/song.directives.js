@@ -28,4 +28,22 @@ juke
     	};
     }
   };
+}])
+.directive('doubleClick', ['PlayerFactory', function(PlayerFactory){
+    return{
+        restrict: 'A',
+        scope: {
+            // doubleClick: '&'
+        },
+        link: function(scope, element, attr){
+            element.on('dblclick', function(){
+                doubleClick();
+            });
+
+            function doubleClick(){
+                console.log("scope", scope, "elem", element);
+                scope.$root.start(scope.$parent.song, scope.$parent.album);
+            }
+        }
+    }
 }]);
